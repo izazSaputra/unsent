@@ -12,7 +12,7 @@ const App = () => {
   });
 
   return (
-    <main>
+    <main data-active-section={activeSection.number}>
       <SectionIndex section={activeSection} />
 
       <Hero setActiveSection={setActiveSection} />
