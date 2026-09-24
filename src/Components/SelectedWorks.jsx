@@ -69,7 +69,13 @@ const SelectedWorks = ({ setActiveSection }) => {
         {projects.map((project) => (
           <article className="project-card" key={project.id}>
             {project.image && (
-              <div className="project-card-preview">
+              <a
+                className="project-card-preview"
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${project.title} website (opens in a new tab)`}
+              >
                 <img
                   src={project.image}
                   alt={`Tampilan antarmuka ${project.title}`}
@@ -78,7 +84,12 @@ const SelectedWorks = ({ setActiveSection }) => {
                   width={1600}
                   height={1000}
                 />
-              </div>
+
+                <span className="project-card-preview-label" aria-hidden="true">
+                  Visit website
+                  <ArrowUpRight size={16} />
+                </span>
+              </a>
             )}
             <div className="project-card-meta">
               <span className="project-card-number">{project.number}</span>

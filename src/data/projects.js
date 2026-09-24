@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     id: "samira-travel",
-    number: "03",
+    number: "02",
     title: "SAMIRA TRAVEL",
     category: "Travel Company Profile",
     role: "Frontend Development",
@@ -24,7 +24,7 @@ export const projects = [
   },
   {
     id: "smilework",
-    number: "02",
+    number: "03",
     title: "SMILEWORK",
     category: "Services & Project Showcase",
     role: "Frontend Development",
