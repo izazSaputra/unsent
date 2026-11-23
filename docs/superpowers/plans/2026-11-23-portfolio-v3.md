@@ -6,7 +6,9 @@
 
 **Goal:** Rebuild Izaz's one-page portfolio as **Unsent**, a set of letters written in prose and code, with a source-code lens as the signature interaction and an epilogue where the visitor's letter finally gets sent.
 
-**Architecture:** One React page with six sections (prologue, author, three project letters, epilogue), a fixed Contents bar, and a cursor lens. Design tokens live in one CSS file. All motion is GSAP inside `gsap.matchMedia()` with a reduced-motion branch. Behaviour is checked by a Puppeteer smoke script against the running dev server. New components are built alongside the old ones; the v2 components are deleted in the last task so the site runs at every commit.
+**Architecture:** One React page with six sections (prologue, author, three project letters, epilogue), a fixed Contents bar, and a cursor lens. Design tokens live in one CSS file. All motion is GSAP inside `gsap.matchMedia()` with a reduced-motion branch. Behaviour is checked by a Puppeteer smoke script against the running dev server.
+
+> **Change (2026-11-23):** at Izaz's request the v2 code was removed up front instead of in Task 8. Removed: `Hero`, `Manifesto`, `SelectedWorks` (+ css), `SectionIndex`, `Navbar`, `heroPointer.js`, `constant/`, `src/assets/`, `public/icons.svg`, and the unused `@fortawesome/*` packages. `src/App.jsx` is a bare `<main />` and `src/index.css` is empty. Kept: `src/utils/cursor.js`, `src/data/projects.js`, `public/images/projects/*`, `public/favicon.svg`. Task 1 Step 4 now writes `index.css` from an empty file, and Task 8 Step 4 is already done.
 
 **Tech Stack:** React 19, Vite 8, GSAP 3 (ScrollTrigger, SplitText, `@gsap/react`), lucide-react, puppeteer-core (dev only), Google Fonts (Big Shoulders Display, Newsreader, JetBrains Mono).
 
